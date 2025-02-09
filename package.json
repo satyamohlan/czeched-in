@@ -1,0 +1,11 @@
+{
+  "name": "czeched-in",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Satyam Ohlan",
+  "license": "ISC",
+  "description": ""
+}
