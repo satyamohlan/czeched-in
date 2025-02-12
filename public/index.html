@@ -5,39 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/init.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div id="map"></div>
     </div>
+        
+    
 </body>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 crossorigin=""></script>
-<script>
-  function main(){
-    if(navigator.geolocation){
-     navigator.geolocation.getCurrentPosition((data)=>{
-        console.log(data)
-        loadMap(data.coords.latitude,data.coords.longitude);
-        
-    },(err)=>(console.log(err)));
-}
-}
-function loadMap(latitude,longitude){
-    var map = L.map('map').setView([latitude,longitude], 12);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    
-    maxZoom: 19,
-    minZoom:3,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-}
-    
-document.addEventListener('load',main());
-</script>
+<script src="scripts/script.js"></script>
+<script src="https://kit.fontawesome.com/adad2eba46.js" crossorigin="anonymous"></script>
 </html>
